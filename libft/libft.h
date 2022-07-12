@@ -6,7 +6,7 @@
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 19:24:15 by mimarque          #+#    #+#             */
-/*   Updated: 2022/04/04 00:07:07 by mimarque         ###   ########.fr       */
+/*   Updated: 2022/06/29 14:57:31 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,65 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <unistd.h>
+# include <stdbool.h>
+# include <stdio.h>
+# include <stdarg.h>
+# include <string.h>
+# include <fcntl.h>
 
+/* printf defines */
+# define MY_TYPES "diuoxXfFeEgGaAcspn%"
+# define MAXBUF 348
+# define BUF 34
+# define U_LONG unsigned long
+# define MY_DIU "diouXx"
+# define MY_DIUP "pdiouXx"
+# define MY_UNSIGNED "uoxX"
+# define MY_NUMS "123456789"
+# define NO_SIGN_TYPE "cspuoxX"
+
+/* Get_Next_Line defines */
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+# ifndef NUM_OF_FD
+#  define NUM_OF_FD 256
+# endif
+
+/* linked list struct */
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+/* printf struct */
+/*
+	A format specifier follows this prototype:
+	%[param][flags][width][.precision][length]specifier
+*/
+typedef struct s_args
+{
+	char	*type;
+	char	*cp;
+	char	*pref;
+	char	c;
+	char	hash;
+	char	dash;
+	char	star;
+	char	zero;
+	char	dot;
+	char	sign;
+	char	base;
+	int		width;
+	int		precision;
+	int		dprec;
+	int		caps;
+	int		size;
+	int		realsz;
+	int		prsize;
+	U_LONG	ulval;
+}	t_args;
 
 /* Part I & II*/
 int		ft_atoi(const char *nptr);
@@ -33,6 +86,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -73,4 +127,30 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
+
+/* printf */
+void	ft_print(char *s, int len);
+void	pad(int n, char with);
+char	*print_base(char *cp, U_LONG value, unsigned int base, t_args *a);
+int		get_value(char **format);
+void	get_star(t_args *a, va_list args);
+void	get_precision(t_args *a, char **format, va_list *args);
+void	get_flags(char **fmt, t_args *a, va_list *args);
+void	get_type_values(t_args *a, va_list *args);
+void	adjustments(t_args *a);
+void	s_setup(t_args *a);
+void	csp_setup(t_args *a);
+void	dioux_setup(t_args *a);
+int		print_formating(t_args *a);
+int		function_colection(char **fmt, t_args *a, va_list *args, char *buf);
+int		ft_printf(const char *format, ...);
+
+/* GNL */
+//char	*ft_strchr(const char *s, int c);
+char	*ft_strldup(char *s1, int start, int end);
+char	*ft_strjoinfree(char *s1, char *s2);
+//size_t	ft_strlen(const char *s);
+char	*cycle(char **backup, int fd, char *buf);
+char	*returner(char **backup, int fd);
+char	*get_next_line(int fd);
 #endif
