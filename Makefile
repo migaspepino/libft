@@ -6,7 +6,7 @@
 #    By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/28 18:26:42 by mimarque          #+#    #+#              #
-#    Updated: 2021/12/08 10:26:08 by mimarque         ###   ########.fr        #
+#    Updated: 2022/04/04 00:16:13 by mimarque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,11 @@ SRC_FILES=	ft_atoi.c		\
 			ft_strmapi.c	\
 			ft_strncmp.c	\
 			ft_strnstr.c	\
+			ft_strpbrk.c	\
 			ft_strrchr.c	\
 			ft_strtrim.c	\
 			ft_substr.c		\
+			ft_substrpbrk.c	\
 			ft_tolower.c	\
 			ft_toupper.c	
 
@@ -99,22 +101,22 @@ $(OBJ_DIR):
 	$(CC) $(CFLAGS) -c $< -o $(OBJ_DIR)$@ 
 
 bonus: $(OBJ_DIR) $(SRC_NAMES) $(BONUS_NAMES)
-	ar -r $(NAME) $(BONUS_NAMES_O)
+	ar -rc $(NAME) $(BONUS_NAMES_O)
 	ranlib $(NAME)
 
 clean:
 	rm -rf $(OBJ_DIR)
 
 sclean: clean
-	rm -rf $(NAME) $(LIBSO) a.out
+	rm -rf $(NAME) $(LIBSO)
 
 fclean: clean
 	rm -f $(NAME)
 
-re: sclean all
+re: fclean all
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC_FILES) $(BONUS_FILES)
 	gcc -nostartfiles -shared -o libft.so $(SRC_FILES) $(BONUS_FILES)
 
-.PHONY: all clean fclean re so
+.PHONY: all bonus clean sclean fclean re so

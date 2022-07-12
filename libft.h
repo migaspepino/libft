@@ -6,7 +6,7 @@
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 19:24:15 by mimarque          #+#    #+#             */
-/*   Updated: 2021/11/24 00:12:06 by mimarque         ###   ########.fr       */
+/*   Updated: 2022/04/04 00:07:07 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,11 @@ size_t	ft_strlen(const char *s);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strpbrk(const char *s, char *accept);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substrpbrk(char *s, size_t len, char *accept);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 

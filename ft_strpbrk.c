@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 18:47:16 by mimarque          #+#    #+#             */
-/*   Updated: 2022/03/31 23:37:48 by mimarque         ###   ########.fr       */
+/*   Created: 2022/03/31 23:24:21 by mimarque          #+#    #+#             */
+/*   Updated: 2022/03/31 23:27:00 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Check if c is a digit
+ * @brief LibC function to find a character from a list of chars
  * 
- * @param c
- * @return true 
- * @return false 
+ * @param s string to go through
+ * @param accept list of chars to find in 's'
+ * @return char* 
  */
-int	ft_isdigit(int c)
+char	*ft_strpbrk(const char *s, char *accept)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	char	*a;
+
+	while (*s != '\0')
+	{
+		a = accept;
+		while (*a != '\0')
+			if (*a++ == *s)
+				return ((char *) s);
+		++s;
+	}
+	return (NULL);
 }

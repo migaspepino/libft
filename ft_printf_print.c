@@ -1,33 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_printf_print.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 19:23:08 by mimarque          #+#    #+#             */
-/*   Updated: 2022/06/18 08:50:50 by mimarque         ###   ########.fr       */
+/*   Created: 2022/03/31 21:15:51 by mimarque          #+#    #+#             */
+/*   Updated: 2022/05/16 14:05:18 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Gets the lenght of a string
+ * @brief The true return - magic happens here
  * 
- * @param s the string to get the lenght
- * @return size_t 
+ * @param s string or char to print 
+ * @param fd file descriptor (1 default)
+ * @param len ammount of chars to print
  */
-size_t	ft_strlen(const char *s)
+void	ft_print(char *s, int len)
 {
-	size_t	i;
-
 	if (!s)
-		return (0);
-	i = 0;
-	while (s[i])
+		return ;
+	write(1, s, len);
+}
+
+/**
+ * @brief prints n "with" characters
+ * 
+ * @param n number of characters to pad
+ * @param with chars to pad with
+ */
+void	pad(int n, char with)
+{
+	if (n > 0)
 	{
-		i++;
+		while (n > 0)
+		{
+			ft_print(&with, 1);
+			n--;
+		}
 	}
-	return (i);
 }
