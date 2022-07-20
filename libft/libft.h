@@ -6,7 +6,7 @@
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 19:24:15 by mimarque          #+#    #+#             */
-/*   Updated: 2022/06/29 14:57:31 by mimarque         ###   ########.fr       */
+/*   Updated: 2022/07/20 23:10:44 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,8 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
+/* added to bonus */
+t_list	*ft_lstpenultimate(t_list **lst);
 
 /* printf */
 void	ft_print(char *s, int len);
