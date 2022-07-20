@@ -18,8 +18,8 @@ Based on [vvarodi](https://github.com/vvarodi/libft_42)'s and [appinha](https://
 | [ft_isascii.c](#ft_isascii)        | [ft_lstlast.c](#ft_lstlast)
 | [ft_isdigit.c](#ft_isdigit)        | [ft_lstmap.c](#ft_lstmap)
 | [ft_isprint.c](#ft_isprint)        | [ft_lstnew.c](#ft_lstnew)
-| [ft_isspace.c](#ft_isspace)        | [ft_lstsize.c](#ft_lstsize)
-| [ft_itoa.c](#ft_itoa)              |
+| [ft_isspace.c](#ft_isspace)        | [ft_lstpenultimate.c](#ft_lstpenultimate)
+| [ft_itoa.c](#ft_itoa)              | [ft_lstsize.c](#ft_lstsize)
 | [ft_memccpy.c](#ft_memccpy)        |
 | [ft_memchr.c](#ft_memchr)          |
 | [ft_memcmp.c](#ft_memcmp)          |
@@ -126,6 +126,7 @@ Based on [vvarodi](https://github.com/vvarodi/libft_42)'s and [appinha](https://
 * [`ft_lstlast`](libft/ft_lstlast.c) - find last element of list.
 * [`ft_lstmap`](libft/ft_lstmap.c) - apply function to content of all list's elements into new list.
 * [`ft_lstnew`](libft/ft_lstnew.c) - create new list.
+* [`ft_lstpenultimate`](libft/ft_lstpenultimate) - get penultimate element of the list.
 * [`ft_lstsize`](libft/ft_lstsize.c) - count elements of a list.
 
 ## Full description
