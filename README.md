@@ -386,3 +386,76 @@ If the character passed as an argument is an uppercase, convert to lower| The ch
 Description | Param. #1 | Return Value
 :-----------: | :-----------: | :-----------:
 If the character passed as an argument is a lowercase, convert to upper| The character to convert | If c is a lowercase letter, returns its uppercase equivalent. Otherwise,  it  returns  c.
+
+### [ft_lstadd_back](libft/ft_lstadd_back.c) - add new element at end of list.
+
+`void	ft_lstadd_back(t_list **lst, t_list *new);`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | 
+| Adds the node ’new’ at the end of the list. | **lst:**  The address of a pointer to the first link of a list. |**new:**  The address of a pointer to the node to be added to the list.| None
+
+### [ft_lstadd_front](libft/ft_lstadd_front.c) - add new element at beginning of list.
+
+`void	ft_lstadd_front(t_list **lst, t_list *new);`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | 
+| Adds the node ’new’ at the beginning of the list. | **lst:**  The address of a pointer to the first link of a list. |**new:**  The address of a pointer to the node to be added to the list.| None
+
+### [ft_lstclear](libft/ft_lstclear.c) - delete sequence of elements of list from a starting point.
+
+`void ft_lstclear(t_list **lst, void (*del)(void *));`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | 
+| Deletes and frees the given node and every successor of that node, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL. | **lst:**  The address of a pointer to a node. | **del:**  The address of the function used to delete the content. | None
+
+### [ft_lstdelone](libft/ft_lstdelone.c) - delete element from list.
+
+`void ft_lstdelone(t_list *lst, void (*del)(void  *));`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | 
+| Takes as a parameter a node and frees the memory of the node’s content using the function ’del’ given as a parameter and free the node. The memory of ’next’ must not be freed. | **lst:**  The node to free. | **del:**  The address of the function used to delete the content. | None
+
+### [ft_lstiter](libft/ft_lstiter.c) - apply function to content of all list's elements.
+
+`void ft_lstiter(t_list *lst, void (*f)(void *));`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | 
+| Iterates the list ’lst’ and applies the function ’f’ on the content of each node.| **lst:**  The address of a pointer to a node. | **f:**  The address of the function used to iterate on the list. | None
+
+### [ft_lstlast](libft/ft_lstlast.c) - Returns the last node of the list.
+
+`t_list *ft_lstlast(t_list *lst);`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+| Returns the last node of the list. | **lst:**  The beginning of the list. | Last node of the list
+
+### [ft_lstmap](libft/ft_lstmap.c) - apply function to content of all list's elements into new list.
+
+`t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+Iterates the list ’lst’ and applies the function ’f’ on the content of each node. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of a node if needed. | **f:**  The address of the function used to iterate on the list. | **del:**  The address of the function used to delete the content of a node if needed. | The new list. NULL if the allocation fails
+
+### [ft_lstnew](libft/ft_lstnew.c) - create new list.
+
+`t_list	*ft_lstnew(void *content);`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+| Allocates (with malloc(3)) and returns a new node. The member variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL. | **content:**  The content to create the node with. | The new node
+
+### [ft_lstsize](libft/ft_lstsize.c) - Counts the number of nodes in a list.
+
+`int ft_lstsize(t_list *lst);`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+| Counts the number of nodes in a list. | **lst:**  The beginning of the list. | The length of the list
+
