@@ -6,7 +6,7 @@
 #    By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/28 18:26:42 by mimarque          #+#    #+#              #
-#    Updated: 2022/10/16 19:34:00 by mimarque         ###   ########.fr        #
+#    Updated: 2022/10/16 19:47:59 by mimarque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,9 @@ SRC_NAMES=${SRC_FILES:.c=.o}
 
 SRC_NAMES_O=$(addprefix $(OBJ_DIR), $(SRC_NAMES))
 
-all: $(SRC_NAMES_O) $(NAME)
+all: $(OBJ_DIR) $(NAME)
 
-$(NAME): $(SRC_NAMES) | $(OBJ_DIR)
+$(NAME): $(SRC_NAMES_O) | $(OBJ_DIR)
 	ar -rc $@ $(SRC_NAMES_O)
 	ranlib $@
 
