@@ -130,29 +130,7 @@ Based on [vvarodi](https://github.com/vvarodi/libft_42)'s and [appinha](https://
 
 ## Full description
 
-### [ft_atoi](libft/ft_atoi.c)
-
-`int    ft_atoi(const char *str)`
-
-Description | Param. #1 | Return Value
-:-----------: | :-----------: | :-----------:
-Convert a string to a integer | The string to be converted to int | The converted value
-
-### [ft_bzero](libft/ft_bzero.c)
-
-`void    *ft_bzero(void *s,  size_t n)`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
- Erases the data in the "n" bytes of the memory starting at the location pointed by "s" writing zeroes | The string on which to operate | The number of bytes | None
-
-### [ft_calloc](libft/ft_calloc.c)
-
-`void    *ft_calloc(size_t count, size_t size)`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
- Allocates enough space for count objects that are size bytes of memory each, and returns a pointer to the allocated memory. The allocated memory is filled with bytes of value zero | Number of elements to be allocated | Size of elements | A pointer to the allocated memory, or NULL if the request fails
+### Functions from `<ctype.h>`:
 
 ### [ft_isalnum](libft/ft_isalnum.c)
 
@@ -201,6 +179,40 @@ Checks for any printable character including space| The character to test | 0 if
 Description | Param. #1 | Return Value
 :-----------: | :-----------: | :-----------:
  Checks for white-space characters. These are: space, form-feed ('\f'), newline ('\n'),  carriage  return('\r'), horizontal tab ('\t'), and vertical tab ('\v').| The character to test | 0 if the character tests false and 1 if the character tests true
+ 
+### [ft_tolower](libft/ft_tolower.c)
+
+`int    ft_tolower(int c)`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+If the character passed as an argument is an uppercase, convert to lower| The character to convert | If c is a uppercase letter, returns its lowercase equivalent. Otherwise,  it  returns  c.
+
+### [ft_toupper](libft/ft_toupper.c)
+
+`int    ft_toupper(int c)`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+If the character passed as an argument is a lowercase, convert to upper| The character to convert | If c is a lowercase letter, returns its uppercase equivalent. Otherwise,  it  returns  c.
+
+### Functions from `<stdlib.h>`:
+
+### [ft_atoi](libft/ft_atoi.c)
+
+`int    ft_atoi(const char *str)`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+Convert a string to a integer | The string to be converted to int | The converted value
+
+### [ft_calloc](libft/ft_calloc.c)
+
+`void    *ft_calloc(size_t count, size_t size)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+ Allocates enough space for count objects that are size bytes of memory each, and returns a pointer to the allocated memory. The allocated memory is filled with bytes of value zero | Number of elements to be allocated | Size of elements | A pointer to the allocated memory, or NULL if the request fails
 
 ### [ft_itoa](libft/ft_itoa.c) (extra)
 
@@ -210,6 +222,146 @@ Description | Param. #1 | Return Value
 :-----------: | :-----------: | :-----------:
 Allocates (with malloc) and returns a string representing the integer received as an argument. Negative numbers must be handled | The integer to convert | The string representing the integer. NULL if the allocation fails.
 
+### Functions from `<string.h>`:
+
+### [ft_strchr](libft/ft_strchr.c)
+
+`char    *ft_strchr(const char *s, int c)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Locates the first occurrence of 'c' in the string pointed to by 's'. The terminating null character is considered to be part of the string, therefore if 'c' is '\0', locates the terminating '\0'| Pointer to string | Character to be located | A pointer to the first occurrence of the character c in the string or NULL if the character is not found
+
+### [ft_strdup](libft/ft_strdup.c)
+
+`char    *ft_strdup(const char *s))`
+
+Description | Param. #1 | Return Values
+:-----------: | :-----------: | :-----------:
+Duplicate string s1. Memory  for  the new string is obtained with malloc, and can  be  freed with free | The string to duplicate| A pointer   to  the  duplicated  string.  NULL  if  insufficient  memory  was available
+
+### [ft_strlcat](libft/ft_strlcat.c)
+
+`size_t    ft_strlcat(char *dst, const char *src, size_t size)`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+Concatenate the string src to the end of dst. It will concatenate at most size - strlen(dst) - 1 bytes, NUL-terminating the result | Destination array | String to be appended to dst | Maximum number of characters to be appended | The initial length of dst plus the length of src
+
+### [ft_strlcpy](libft/ft_strlcpy.c)
+
+`size_t    ft_strlcpy(char *dst, const char *src, size_t dstsize)`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+Copies up to dstsize - 1 characters from the NUL-terminated string src to dst, NUL-terminating the result| Destination array | String to be copied | Number of characters to be copied from src | Total length of the string to create (length of src)
+
+### [ft_strlen](libft/ft_strlen.c)
+
+`size_t    ft_strlen(const char *s)`
+
+Description | Param. #1 | Return Values
+:-----------: | :-----------: | :-----------:
+Calculates the length of the string pointed to by s, excluding the terminating null byte ('\0') | The string to calculate | Number of characters in the string pointed to by s
+
+### [ft_strncmp](libft/ft_strncmp.c)
+
+`int    strncmp(const char *s1, const char *s2, size_t n);`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+The strncmp() function compares not more than n characters.  Because strncmp() is designed for comparing strings rather than binary data, characters that appear after a ‘\0’ character are not compared. | String 1 | String 2 | size to compare | The strcmp() and strncmp() functions return an integer greater than, equal to, or less than 0, according as the string s1 is greater than, equal to, or less than the string s2. The comparison is done using unsigned characters, so that ‘\200’ is greater than ‘\0’.
+
+### [ft_strnstr](libft/ft_strnstr.c)
+
+`char    *ft_strnstr(const char *haystack, const char *needle, size_t len)`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+Locate substring, where not more than 'len' characters are searched. Finds the first occurrence of the substring 'needle' in  the  string 'haystack'. The terminating null bytes ('\0') are not compared. | String to be scanned | The small string to be searched in 'haystack' string|The maximum amount of characters to be searched |A pointer to the first character of the first occurrence of little is returned. NULL if the substring is not found. If 'needle' is an empty string, 'haystack' is returned
+
+### [ft_strrchr](libft/ft_strrchr.c)
+
+`char    *ft_strrchr(const char *s, int c)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Locates the last occurrence of 'c' in the string pointed to by 's'. The terminating null character is considered to be part of the string, therefore if 'c' is '\0', locates the terminating '\0'| Pointer to string | Character to be located | A pointer to the last occurrence of the character c in the string or NULL if the character is not found
+
+### [ft_strstr](libft/ft_strstr.c)
+
+ `char *strstr(const char *haystack, const char *needle)` 
+
+Description |  Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+ Locates the first occurrence of the null-terminated string `needle` in the string `haystack`. The terminating null characters are not compared. | The string to search | The string to find | A pointer to the beginning of the located substring, or NULL if the substring is not found |
+ 
+### [ft_strcmp](libft/ft_strcmp.c)
+
+`int strcmp(const char *s1, const char *s2)`
+
+Description |  Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Compares the null-terminated strings `s1` and `s2`. It compares character by character until a difference is found or the end of the strings is reached. | The first string to compare | The second string to compare | An integer greater than, equal to, or less than 0, according to whether `s1` is greater than, equal to, or less than `s2` |
+ 
+### [ft_strnrcmp](libft/ft_strnrcmp.c)
+
+`int strnrcmp(const char *s1, const char *s2, size_t n)` 
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value 
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------: 
+Compares up to `n` characters of the strings `s1` and `s2`, starting from the end of the strings. | The first string to compare | The second string to compare | The number of characters to compare | An integer greater than, equal to, or less than 0, according to whether `s1` is greater than, equal to, or less than `s2`
+
+### [ft_strcpy](libft/ft_strcpy.c) 
+
+`char *strcpy(char *dst, const char *src)` 
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: 
+ Copies the null-terminated string `src` to `dst` (including the null terminator). | The destination buffer | The source string | A pointer to the destination string `dst`
+
+### [ft_strncpy](libft/ft_strncpy.c)
+
+`char *strncpy(char *dst, const char *src, size_t n)` 
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------: 
+Copies up to `n` characters from the string `src` to `dst`. If `src` is less than `n` characters long, the remainder of `dst` is padded with null bytes. | The destination buffer | The source string | The number of characters to copy | A pointer to the destination string `dst`
+
+### [ft_strndup](libft/ft_strndup.c) 
+
+`char *strndup(const char *s, size_t n)` 
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: 
+Allocates memory and duplicates up to `n` characters from the string `s`, null-terminating the result. | The string to duplicate | The number of characters to duplicate | A pointer to the newly allocated string, or NULL if the allocation fails 
+
+### [ft_strcat](libft/ft_strcat.c) 
+
+`char *strcat(char *dst, const char *src)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Appends the null-terminated string `src` to the end of the null-terminated string `dst`. The terminating null byte of `dst` is overwritten by the first character of `src`, and a new null byte is added at the end of the concatenated string. | The destination buffer | The source string | A pointer to the resulting string `dst` 
+
+### [ft_strncat](libft/ft_strncat.c) 
+
+`char *strncat(char *dst, const char *src, size_t n)`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+Appends up to `n` characters from the string `src` to the end of the null-terminated string `dst`, null-terminating the result. | The destination buffer | The source string | The number of characters to append | A pointer to the resulting string `dst`
+
+### Functions from `<strings.h>`:
+
+### [ft_bzero](libft/ft_bzero.c)
+
+`void    *ft_bzero(void *s,  size_t n)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+ Erases the data in the "n" bytes of the memory starting at the location pointed by "s" writing zeroes | The string on which to operate | The number of bytes | None
+ 
 ### [ft_memccpy](libft/ft_memccpy.c)
 
 `void    *ft_memccpy(void *dst, const void *src, int c, size_t n)`
@@ -258,133 +410,51 @@ Description | Param. #1 | Param. #2 | Param. #3 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------: | :-----------:
 Fill with "len" bytes of "c" the memory of "s"| The string on which to operate | Value c (converted to an unsigned char) | The number of bytes | A pointer to the memory area s
 
+### Functions from `<stdio.h>`:
+
+### [ft_printf](libft/ft_printf.c)
+
+`int printf(const char *format, ...)`
+
+Description | Param. #1 | Return Value 
+:-----------: | :-----------: | :-----------: 
+Formats and prints the data to the standard output according to the format string `format`. The `...` denotes a variable number of arguments to be formatted and printed. | The format string | The number of characters printed (excluding the null byte) 
+
+See: https://en.cppreference.com/w/c/io/fprintf
+
 ### [ft_putchar_fd](libft/ft_putchar_fd.c)
+
+`void putchar_fd(char c, int fd)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Writes the character `c` to the file descriptor `fd`. | The character to write | The file descriptor | None 
 
 ### [ft_putendl_fd](libft/ft_putendl_fd.c)
 
+`void putendl_fd(char *s, int fd)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Writes the string `s` to the file descriptor `fd` followed by a newline character. If `s` is NULL, nothing is written. | The string to write | The file descriptor | None 
+
 ### [ft_putnbr_fd](libft/ft_putnbr_fd.c)
+
+`void putnbr_fd(int n, int fd)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Writes the integer `n` to the file descriptor `fd`. | The integer to write | The file descriptor | None 
 
 ### [ft_putstr_fd](libft/ft_putstr_fd.c)
 
-### [ft_strsplit](libft/ft_strsplit.c)
-
-`char    **ft_split(char const *s, char c)`
+`void putstr_fd(char *s, int fd)`
 
 Description | Param. #1 | Param. #2 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------:
-Allocates (with malloc) and returns  an array of strings obtained by splitting s using the character 'c' as a delimiter. The array must be ended by a NULL pointer|The string to be split |The delimiter character| The array of new strings result of the split. NULL if the allocation fails
+Writes the string `s` to the file descriptor `fd`. If `s` is NULL, nothing is written. | The string to write | The file descriptor | None
 
-### [ft_strchr](libft/ft_strchr.c)
-
-`char    *ft_strchr(const char *s, int c)`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
-Locates the first occurrence of 'c' in the string pointed to by 's'. The terminating null character is considered to be part of the string, therefore if 'c' is '\0', locates the terminating '\0'| Pointer to string | Character to be located | A pointer to the first occurrence of the character c in the string or NULL if the character is not found
-
-### [ft_strdup](libft/ft_strdup.c)
-
-`char    *ft_strdup(const char *s))`
-
-Description | Param. #1 | Return Values
-:-----------: | :-----------: | :-----------:
-Duplicate string s1. Memory  for  the new string is obtained with malloc, and can  be  freed with free | The string to duplicate| A pointer   to  the  duplicated  string.  NULL  if  insufficient  memory  was available
-
-### [ft_strjoin](libft/ft_strjoin.c)
-
-`char    *ft_strjoin(char const *s1, char const *s2)`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
-Allocates (with malloc) and returns a new string, result of the concatenation of s1 and s2 |The prefix string |The suffix string | The new string. NULL if the allocation fails
-
-### [ft_strlcat](libft/ft_strlcat.c)
-
-`size_t    ft_strlcat(char *dst, const char *src, size_t size)`
-
-Description | Param. #1 | Param. #2 | Param. #3 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
-Concatenate the string src to the end of dst. It will concatenate at most size - strlen(dst) - 1 bytes, NUL-terminating the result | Destination array | String to be appended to dst | Maximum number of characters to be appended | The initial length of dst plus the length of src
-
-### [ft_strlcpy](libft/ft_strlcpy.c)
-
-`size_t    ft_strlcpy(char *dst, const char *src, size_t dstsize)`
-
-Description | Param. #1 | Param. #2 | Param. #3 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
-Copies up to dstsize - 1 characters from the NUL-terminated string src to dst, NUL-terminating the result| Destination array | String to be copied | Number of characters to be copied from src | Total length of the string to create (length of src)
-
-### [ft_strlen](libft/ft_strlen.c)
-
-`size_t    ft_strlen(const char *s)`
-
-Description | Param. #1 | Return Values
-:-----------: | :-----------: | :-----------:
-Calculates the length of the string pointed to by s, excluding the terminating null byte ('\0') | The string to calculate | Number of characters in the string pointed to by s
-
-### [ft_strmapi](libft/ft_strmapi.c)
-
-`char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
-Applies the function f to each character of the string passed as argument to create a new string (with malloc) resulting from successive applications of f |The string on which to iterate| The function to apply to each character| The string created from the successive applications of f. Returns NULL if the allocation fails
-
-### [ft_strncmp](libft/ft_strncmp.c)
-
-`int    strncmp(const char *s1, const char *s2, size_t n);`
-
-Description | Param. #1 | Param. #2 | Param. #3 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
-The strncmp() function compares not more than n characters.  Because strncmp() is designed for comparing strings rather than binary data, characters that appear after a ‘\0’ character are not compared. | String 1 | String 2 | size to compare | The strcmp() and strncmp() functions return an integer greater than, equal to, or less than 0, according as the string s1 is greater than, equal to, or less than the string s2. The comparison is done using unsigned characters, so that ‘\200’ is greater than ‘\0’.
-
-### [ft_strnstr](libft/ft_strnstr.c)
-
-`char    *ft_strnstr(const char *haystack, const char *needle, size_t len)`
-
-Description | Param. #1 | Param. #2 | Param. #3 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
-Locate substring, where not more than 'len' characters are searched. Finds the first occurrence of the substring 'needle' in  the  string 'haystack'. The terminating null bytes ('\0') are not compared. | String to be scanned | The small string to be searched in 'haystack' string|The maximum amount of characters to be searched |A pointer to the first character of the first occurrence of little is returned. NULL if the substring is not found. If 'needle' is an empty string, 'haystack' is returned
-
-### [ft_strrchr](libft/ft_strrchr.c)
-
-`char    *ft_strrchr(const char *s, int c)`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
-Locates the last occurrence of 'c' in the string pointed to by 's'. The terminating null character is considered to be part of the string, therefore if 'c' is '\0', locates the terminating '\0'| Pointer to string | Character to be located | A pointer to the last occurrence of the character c in the string or NULL if the character is not found
-
-### [ft_strtrim](libft/ft_strtrim.c)
-
-`char    *ft_strjoin(char const *s1, char const *s2)`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
-Allocates (with malloc) and returns a copy of the string given as argument without the characters specified in the set argument at the beginning and the end of the string|The string to be trimmed |The reference set of character to trim | The trimmed string. NULL if the allocation fails
-
-### [ft_substr](libft/ft_substr.c)
-
-`char   *ft_substr(char const *s, unsigned int start, size_t len)`
-
-Description | Param. #1 | Param. #2 | Param. #3 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
-Allocates (with malloc) and returns a substring from the string given in argument. The substring begins at index 'start' and is of maximum size 'len'| The string from which create the substring | The start index of the substring in the string| The maximum length of the substring | The substring. NULL if the allocation fails
-
-### [ft_tolower](libft/ft_tolower.c)
-
-`int    ft_tolower(int c)`
-
-Description | Param. #1 | Return Value
-:-----------: | :-----------: | :-----------:
-If the character passed as an argument is an uppercase, convert to lower| The character to convert | If c is a uppercase letter, returns its lowercase equivalent. Otherwise,  it  returns  c.
-
-### [ft_toupper](libft/ft_toupper.c)
-
-`int    ft_toupper(int c)`
-
-Description | Param. #1 | Return Value
-:-----------: | :-----------: | :-----------:
-If the character passed as an argument is a lowercase, convert to upper| The character to convert | If c is a lowercase letter, returns its uppercase equivalent. Otherwise,  it  returns  c.
+### Bonus (linked-list):
 
 ### [ft_lstadd_back](libft/ft_lstadd_back.c) - add new element at end of list.
 
@@ -450,6 +520,14 @@ Description | Param. #1 | Return Value
 :-----------: | :-----------: | :-----------:
 | Allocates (with malloc(3)) and returns a new node. The member variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL. | **content:**  The content to create the node with. | The new node
 
+### [ft_lstpenultimate](libft/ft_lstpenultimate.c) - Returns the penultimate node of the list
+
+`t_list *ft_lstpenultimate(t_list **lst)`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+Returns the node before the last node of the list. If the list has fewer than two nodes, it returns `NULL`. | The address of a pointer to the first node of the list. | The penultimate node of the list or `NULL` if the list is too short.
+
 ### [ft_lstsize](libft/ft_lstsize.c) - Counts the number of nodes in a list.
 
 `int ft_lstsize(t_list *lst);`
@@ -458,3 +536,80 @@ Description | Param. #1 | Return Value
 :-----------: | :-----------: | :-----------:
 | Counts the number of nodes in a list. | **lst:**  The beginning of the list. | The length of the list
 
+### Non-standard Functions (Custom or Additional Implementation):
+
+`char    **ft_split(char const *s, char c)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Allocates (with malloc) and returns  an array of strings obtained by splitting s using the character 'c' as a delimiter. The array must be ended by a NULL pointer|The string to be split |The delimiter character| The array of new strings result of the split. NULL if the allocation fails
+
+### [ft_delete_split_arr](libft/ft_delete_split_arr.c)
+
+`char **ft_delete_split_arr(char **arr)`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+Frees each string in the array `arr` and then frees the array itself. The function returns `NULL`. | The array of strings to be freed | Always returns `NULL` 
+
+### [ft_strjoin](libft/ft_strjoin.c)
+
+`char    *ft_strjoin(char const *s1, char const *s2)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Allocates (with malloc) and returns a new string, result of the concatenation of s1 and s2 |The prefix string |The suffix string | The new string. NULL if the allocation fails
+
+### [ft_strmapi](libft/ft_strmapi.c)
+
+`char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Applies the function f to each character of the string passed as argument to create a new string (with malloc) resulting from successive applications of f |The string on which to iterate| The function to apply to each character| The string created from the successive applications of f. Returns NULL if the allocation fails
+
+### [ft_strtrim](libft/ft_strtrim.c)
+
+`char    *ft_strjoin(char const *s1, char const *s2)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Allocates (with malloc) and returns a copy of the string given as argument without the characters specified in the set argument at the beginning and the end of the string|The string to be trimmed |The reference set of character to trim | The trimmed string. NULL if the allocation fails
+
+### [ft_substr](libft/ft_substr.c)
+
+`char   *ft_substr(char const *s, unsigned int start, size_t len)`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+Allocates (with malloc) and returns a substring from the string given in argument. The substring begins at index 'start' and is of maximum size 'len'| The string from which create the substring | The start index of the substring in the string| The maximum length of the substring | The substring. NULL if the allocation fails
+
+### [ft_striteri](libft/ft_striteri.c) - Applies a function to each character in a string with its index
+
+`void ft_striteri(char *s, void (*f)(unsigned int, char*));`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Applies the function ’f’ to each character of the string ’s’, passing the index and the character as arguments. | **s:** The string to iterate over. | **f:** The function to apply to each character of the string. | None 
+
+### [ft_strpbrk](libft/ft_strpbrk.c) - Locates the first occurrence of any character in a set of characters
+
+`char *ft_strpbrk(const char *s, char *accept);`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Searches the string ’s’ for the first occurrence of any character from the string ’accept’. | **s:** The string to search within. | **accept:** The set of characters to search for. | The pointer to the first occurrence of any character from ’accept’ or `NULL` if no match is found. 
+
+### [ft_substrpbrk](libft/ft_substrpbrk.c) - Locates the first occurrence of any character in a set of characters within a substring
+`char *ft_substrpbrk(char *s, size_t len, char *accept);`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+Searches the substring of ’s’ up to length ’len’ for the first occurrence of any character from ’accept’. | **s:** The string to search within. | **len:** The length of the substring to consider. | **accept:** The set of characters to search for. | The pointer to the first occurrence of any character from ’accept’ within the substring or `NULL` if no match is found.
+
+### [get_next_line](libft/get_next_line.c) - Reads a line from a file descriptor
+
+`char *get_next_line(int fd);`
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+Reads from the file descriptor ’fd’ and returns the next line of text. Each call to this function will return the subsequent line of the file. If the end of file is reached or if an error occurs, it returns `NULL`. The returned line includes the newline character if it is present in the file; otherwise, it returns the text up to the end of the file. | **fd:** The file descriptor from which to read. | The next line read from the file or `NULL` if the end of file is reached or an error occurs.
