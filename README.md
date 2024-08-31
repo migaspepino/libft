@@ -92,7 +92,6 @@ Based on [vvarodi](https://github.com/vvarodi/libft_42)'s and [appinha](https://
 * [`ft_strncmp`](libft/ft_strncmp.c) - compare strings (size-bounded).
 * [`ft_strnstr`](libft/ft_strnstr.c) - locate a substring in a string (size-bounded).
 * [`ft_strrchr`](libft/ft_strrchr.c) - locate character in string (last occurence).
-
 * [`ft_strstr`](libft/ft_strstr.c) * - locate a substring in a string.
 * [`ft_strcmp`](libft/ft_strcmp.c) * - compare strings.
 * [`ft_strnrcmp`](libft/ft_strnrcmp.c) - reversely compare strings (size-bounded).
