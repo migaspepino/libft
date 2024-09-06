@@ -58,75 +58,75 @@ Based on [vvarodi](https://github.com/vvarodi/libft_42)'s and [appinha](https://
 
 ### Functions from `<ctype.h>`
 
-* [`isalnum`](#isalnum) - alphanumeric character test.
-* [`isalpha`](#isalpha) - alphabetic character test.
-* [`isascii`](#isascii) - test for ASCII character.
-* [`isdigit`](#isdigit) - decimal-digit character test.
-* [`isprint`](#isprint) - printing character test (space character inclusive).
-* [`isspace`](#isspace) - white-space character test.
-* [`tolower`](#tolower) - upper case to lower case letter conversion.
-* [`toupper`](#toupper) - lower case to upper case letter conversion.
+* [`ft_isalnum`](#ft_isalnum) - alphanumeric character test.
+* [`ft_isalpha`](#ft_isalpha) - alphabetic character test.
+* [`ft_isascii`](#ft_isascii) - test for ASCII character.
+* [`ft_isdigit`](#ft_isdigit) - decimal-digit character test.
+* [`ft_isprint`](#ft_isprint) - printing character test (space character inclusive).
+* [`ft_isspace`](#ft_isspace) - white-space character test.
+* [`ft_tolower`](#ft_tolower) - upper case to lower case letter conversion.
+* [`ft_toupper`](#ft_toupper) - lower case to upper case letter conversion.
 
 ### Functions from `<stdlib.h>` library
 
-* [`atoi`](#atoi) - convert ASCII string to integer.
-* [`calloc`](#calloc) - memory allocation.
+* [`ft_atoi`](#ft_atoi) - convert ASCII string to integer.
+* [`ft_calloc`](#ft_calloc) - memory allocation.
 
 ### Functions from `<strings.h>` library
 
-* [`bzero`](#bzero) - write zeroes to a byte string.
-* [`memccpy`](#memccpy) - copy string until character found.
-* [`memchr`](#memchr) - locate byte in byte string.
-* [`memcmp`](#memcmp) - compare byte string.
-* [`memcpy`](#memcpy) - copy memory area.
-* [`memmove`](#memmove) - copy byte string.
-* [`memset`](#memset) - write a byte to a byte string.
+* [`ft_bzero`](#ft_bzero) - write zeroes to a byte string.
+* [`ft_memccpy`](#ft_memccpy) - copy string until character found.
+* [`ft_memchr`](#ft_memchr) - locate byte in byte string.
+* [`ft_memcmp`](#ft_memcmp) - compare byte string.
+* [`ft_memcpy`](#ft_memcpy) - copy memory area.
+* [`ft_memmove`](#ft_memmove) - copy byte string.
+* [`ft_memset`](#ft_memset) - write a byte to a byte string.
 
 ### Functions from `<string.h>` library
 
-* [`strcat`](#strcat) * - concatenate strings (s2 into s1).
-* [`strchr`](#strchr) - locate character in string (first occurrence).
-* [`strcmp`](#strcmp) * - compare strings.
-* [`strcpy`](#strcpy) * - copy strings.
-* [`strdup`](#strdup) - save a copy of a string (with malloc).
-* [`strlcat`](#strlcat) - size-bounded string concatenation.
-* [`strlcpy`](#strlcpy) - size-bounded string copying.
-* [`strlen`](#strlen) - find length of string.
-* [`strncat`](#strncat) * - concatenate strings (s2 into s1, size-bounded).
-* [`strncmp`](#strncmp) - compare strings (size-bounded).
-* [`strndup`](#strndup) * - save a copy of a string (with malloc, size-bounded).
-* [`strncpy`](#strncpy) * - copy strings (size-bounded).
-* [`strnrcmp`](#strnrcmp) - reversely compare strings (size-bounded).
-* [`strnstr`](#strnstr) - locate a substring in a string (size-bounded).
-* [`strrchr`](#strrchr) - locate character in string (last occurence).
-* [`strstr`](#strstr) * - locate a substring in a string.
+* [`ft_strcat`](#ft_strcat) * - concatenate strings (s2 into s1).
+* [`ft_strchr`](#ft_strchr) - locate character in string (first occurrence).
+* [`ft_strcmp`](#ft_strcmp) * - compare strings.
+* [`ft_strcpy`](#ft_strcpy) * - copy strings.
+* [`ft_strdup`](#ft_strdup) - save a copy of a string (with malloc).
+* [`ft_strlcat`](#ft_strlcat) - size-bounded string concatenation.
+* [`ft_strlcpy`](#ft_strlcpy) - size-bounded string copying.
+* [`ft_strlen`](#ft_strlen) - find length of string.
+* [`ft_strncat`](#ft_strncat) * - concatenate strings (s2 into s1, size-bounded).
+* [`ft_strncmp`](#ft_strncmp) - compare strings (size-bounded).
+* [`ft_strndup`](#ft_strndup) * - save a copy of a string (with malloc, size-bounded).
+* [`ft_strncpy`](#ft_strncpy) * - copy strings (size-bounded).
+* [`ft_strnrcmp`](#ft_strnrcmp) - reversely compare strings (size-bounded).
+* [`ft_strnstr`](#ft_strnstr) - locate a substring in a string (size-bounded).
+* [`ft_strrchr`](#ft_strrchr) - locate character in string (last occurrence).
+* [`ft_strstr`](#ft_strstr) * - locate a substring in a string.
 
 ### Non-standard functions
 
-* [`itoa`](#itoa) - convert integer to ASCII string.
-* [`putchar_fd`](#putchar_fd) - output a character to given file.
-* [`putendl_fd`](#putendl_fd) - output string to given file with newline.
-* [`putnbr_fd`](#putnbr_fd) - output integer to given file.
-* [`putstr_fd`](#putstr_fd) - output string to given file.
-* [`split`](#split) - split string, with specified character as delimiter, into an array of strings.
-* [`delete_split_arr`](#delete_split_arr) * - free splitted string.
-* [`strjoin`](#strjoin) - concatenate two strings into a new string (with malloc).
-* [`strmapi`](#strmapi) - create new string from modifying string with specified function.
-* [`strtrim`](#strtrim) - trim beginning and end of string with the specified characters.
-* [`substr`](#substr) - extract substring from string.
+* [`ft_itoa`](#ft_itoa) - convert integer to ASCII string.
+* [`ft_putchar_fd`](#ft_putchar_fd) - output a character to given file.
+* [`ft_putendl_fd`](#ft_putendl_fd) - output string to given file with newline.
+* [`ft_putnbr_fd`](#ft_putnbr_fd) - output integer to given file.
+* [`ft_putstr_fd`](#ft_putstr_fd) - output string to given file.
+* [`ft_split`](#ft_split) - split string, with specified character as delimiter, into an array of strings.
+* [`ft_delete_split_arr`](#ft_split) * - free splitted string.
+* [`ft_strjoin`](#ft_strjoin) - concatenate two strings into a new string (with malloc).
+* [`ft_strmapi`](#ft_strmapi) - create new string from modifying string with specified function.
+* [`ft_strtrim`](#ft_strtrim) - trim beginning and end of string with the specified characters.
+* [`ft_substr`](#ft_substr) - extract substring from string.
 
 ### Linked list functions
 
-* [`lstadd_back`](#lstadd_back) - add new element at end of list.
-* [`lstadd_front`](#lstadd_front) - add new element at beginning of list.
-* [`lstclear`](#lstclear) - delete sequence of elements of list from a starting point.
-* [`lstdelone`](#lstdelone) - delete element from list.
-* [`lstiter`](#lstiter) - apply function to content of all list's elements.
-* [`lstlast`](#lstlast) - find last element of list.
-* [`lstmap`](#lstmap) - apply function to content of all list's elements into new list.
-* [`lstnew`](#lstnew) - create new list.
-* [`lstpenultimate`](#lstpenultimate) - get penultimate element of the list.
-* [`lstsize`](#lstsize) - count elements of a list.
+* [`ft_lstadd_back`](#ft_lstadd_back) - add new element at end of list.
+* [`ft_lstadd_front`](#ft_lstadd_front) - add new element at beginning of list.
+* [`ft_lstclear`](#ft_lstclear) - delete sequence of elements of list from a starting point.
+* [`ft_lstdelone`](#ft_lstdelone) - delete element from list.
+* [`ft_lstiter`](#ft_lstiter) - apply function to content of all list's elements.
+* [`ft_lstlast`](#ft_lstlast) - find last element of list.
+* [`ft_lstmap`](#ft_lstmap) - apply function to content of all list's elements into new list.
+* [`ft_lstnew`](#ft_lstnew) - create new list.
+* [`ft_lstpenultimate`](#ft_lstpenultimate) - get penultimate element of the list.
+* [`ft_lstsize`](#ft_lstsize) - count elements of a list.
 
 ## Full description
 
