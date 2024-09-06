@@ -84,22 +84,22 @@ Based on [vvarodi](https://github.com/vvarodi/libft_42)'s and [appinha](https://
 
 ### Functions from `<string.h>` library
 
+* [`ft_strcat`](libft/ft_strcat.c) * - concatenate strings (s2 into s1).
 * [`ft_strchr`](libft/ft_strchr.c) - locate character in string (first occurrence).
+* [`ft_strcmp`](libft/ft_strcmp.c) * - compare strings.
+* [`ft_strcpy`](libft/ft_strcpy.c) * - copy strings.
 * [`ft_strdup`](libft/ft_strdup.c) - save a copy of a string (with malloc).
 * [`ft_strlcat`](libft/ft_strlcat.c) - size-bounded string concatenation.
 * [`ft_strlcpy`](libft/ft_strlcpy.c) - size-bounded string copying.
 * [`ft_strlen`](libft/ft_strlen.c) - find length of string.
+* [`ft_strncat`](libft/ft_strncat.c) * - concatenate strings (s2 into s1, size-bounded).
 * [`ft_strncmp`](libft/ft_strncmp.c) - compare strings (size-bounded).
+* [`ft_strndup`](libft/ft_strndup.c) * - save a copy of a string (with malloc, size-bounded).
+* [`ft_strncpy`](libft/ft_strncpy.c) * - copy strings (size-bounded).
+* [`ft_strnrcmp`](libft/ft_strnrcmp.c) - reversely compare strings (size-bounded).
 * [`ft_strnstr`](libft/ft_strnstr.c) - locate a substring in a string (size-bounded).
 * [`ft_strrchr`](libft/ft_strrchr.c) - locate character in string (last occurence).
 * [`ft_strstr`](libft/ft_strstr.c) * - locate a substring in a string.
-* [`ft_strcmp`](libft/ft_strcmp.c) * - compare strings.
-* [`ft_strnrcmp`](libft/ft_strnrcmp.c) - reversely compare strings (size-bounded).
-* [`ft_strcpy`](libft/ft_strcpy.c) * - copy strings.
-* [`ft_strncpy`](libft/ft_strncpy.c) * - copy strings (size-bounded).
-* [`ft_strndup`](libft/ft_strndup.c) * - save a copy of a string (with malloc, size-bounded).
-* [`ft_strcat`](libft/ft_strcat.c) * - concatenate strings (s2 into s1).
-* [`ft_strncat`](libft/ft_strncat.c) * - concatenate strings (s2 into s1, size-bounded).
 
 ### Non-standard functions
 
