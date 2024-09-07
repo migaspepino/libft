@@ -538,6 +538,8 @@ Description | Param. #1 | Return Value
 
 ### Non-standard Functions (Custom or Additional Implementation):
 
+### [ft_split](libft/ft_split.c) - split string, with specified character as delimiter, into an array of strings.
+
 `char    **ft_split(char const *s, char c)`
 
 Description | Param. #1 | Param. #2 | Return Value
